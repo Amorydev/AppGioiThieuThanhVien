@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DoAnThucTap</string>
+    <string name="type_your_email">Email</string>
+    <string name="type_your_password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="not_registered_yet_sign_up">Chưa có tài khoản , Sign Up !</string>
+</resources>

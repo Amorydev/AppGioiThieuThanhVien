@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "653858669135",
+    "project_id": "doanthuctap-1d363",
+    "storage_bucket": "doanthuctap-1d363.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653858669135:android:120799bcd6d9e1a067a03a",
+        "android_client_info": {
+          "package_name": "com.amory.doanthuctap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqZfweIF5uYAVDtgKxjzMSYE_NTavoG_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
