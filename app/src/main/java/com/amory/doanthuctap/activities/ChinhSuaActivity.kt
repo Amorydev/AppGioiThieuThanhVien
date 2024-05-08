@@ -25,7 +25,7 @@ import retrofit2.Response
 import java.io.File
 
 class ChinhSuaActivity : AppCompatActivity() {
-    private lateinit var binding:ActivityChinhSuaBinding
+    private lateinit var binding: ActivityChinhSuaBinding
     private var mediaPath: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,9 +46,9 @@ class ChinhSuaActivity : AppCompatActivity() {
     private fun setthongtin() {
         val service = retrofit.retrofitInstance.create(Api::class.java)
         val call = service.getthongtin(Utlis.user_current?.mssv.toString())
-        call.enqueue(object : Callback<TeamModel>{
+        call.enqueue(object : Callback<TeamModel> {
             override fun onResponse(call: Call<TeamModel>, response: Response<TeamModel>) {
-                if (response.isSuccessful){
+                if (response.isSuccessful) {
                     val list = response.body()?.result?.get(0)!!
                     binding.edtName.setText(list.name)
                     binding.edtChucvu.setText(list.chucvu)
@@ -63,6 +63,7 @@ class ChinhSuaActivity : AppCompatActivity() {
             }
         })
     }
+
     private fun onCLickThemHinhAnh() {
         binding.btnHinhanh.setOnClickListener {
             ImagePicker.with(this)
@@ -81,7 +82,13 @@ class ChinhSuaActivity : AppCompatActivity() {
             val link_fb = binding.edtFacebook.text!!.trim().toString()
             val link_insta = binding.edtInsta.text!!.trim().toString()
             val link_git = binding.edtGithub.text!!.trim().toString()
-            val image_url = mediaPath
+            var image_url = ""
+            image_url = if (mediaPath.isEmpty()) {
+                "https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100248.jpg?t=st=1715161490~exp=1715165090~hmac=bc9eb9a846531202c462fd2833fabd0a0c2eab8e9d6e4698f44c1f646a0f6273&w=740"
+
+            } else {
+                mediaPath
+            }
             if (name.isEmpty() && mssv.isEmpty() && chucvu.isEmpty() && link_fb.isEmpty() && link_insta.isEmpty() && link_git.isEmpty()) {
                 Toast.makeText(this, "Vui lòng nhập đủ dữ liệu", Toast.LENGTH_LONG).show()
             } else {
