@@ -15,6 +15,15 @@
         android:theme="@style/Theme.DoAnThucTap"
         tools:targetApi="31">
         <activity
+            android:name=".activities.AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ChinhSuaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AddActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.SignUpActivity"
             android:exported="false" />
         <activity

@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_margin="20sp"
+    app:cardCornerRadius="20sp"
     android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ImageView
+            android:id="@+id/contrains"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -19,7 +21,7 @@
             android:alpha="0.5"
             />
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/txt_thanhvien"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/thanhvien"
@@ -38,11 +40,11 @@
             android:layout_height="200sp"
             app:civ_border_color="#FF000000"
             android:layout_marginTop="20sp"
-            android:background="@drawable/img"
+
             app:civ_border_width="2dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_thanhvien" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -89,6 +91,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <TextView
+                android:id="@+id/txt_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10sp"
@@ -123,7 +126,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/view" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/txt_mssv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
@@ -135,7 +138,7 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView
-                android:id="@+id/txt_chucvu"
+                android:id="@+id/txt_abc_chucvu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -146,15 +149,15 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/txt_chuc_vu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:text="Ngủ đông trong nhóm"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="@+id/txt_chucvu"
-                app:layout_constraintStart_toEndOf="@+id/txt_chucvu"
-                app:layout_constraintTop_toTopOf="@+id/txt_chucvu"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_abc_chucvu"
+                app:layout_constraintStart_toEndOf="@+id/txt_abc_chucvu"
+                app:layout_constraintTop_toTopOf="@+id/txt_abc_chucvu"
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView
@@ -167,10 +170,10 @@
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txt_chucvu" />
+                app:layout_constraintTop_toBottomOf="@+id/txt_abc_chucvu" />
 
             <ImageView
-                android:id="@+id/imageView9"
+                android:id="@+id/img_fb"
                 android:layout_width="40sp"
                 android:layout_height="40sp"
                 android:layout_marginStart="52dp"
@@ -181,26 +184,26 @@
                 app:layout_constraintVertical_bias="0.507" />
 
             <ImageView
-                android:id="@+id/imageView11"
+                android:id="@+id/img_insta"
                 android:layout_width="40sp"
                 android:layout_height="40sp"
                 android:background="@drawable/ic_instagram"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageView10"
+                app:layout_constraintEnd_toStartOf="@+id/img_git"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintStart_toEndOf="@+id/img_fb"
                 app:layout_constraintTop_toBottomOf="@+id/textView9"
                 app:layout_constraintVertical_bias="0.507" />
 
             <ImageView
-                android:id="@+id/imageView10"
+                android:id="@+id/img_git"
                 android:layout_width="40sp"
                 android:layout_height="40sp"
                 android:background="@drawable/ic_github"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/imageView11"
+                app:layout_constraintStart_toEndOf="@+id/img_insta"
                 app:layout_constraintTop_toBottomOf="@+id/textView9"
                 app:layout_constraintVertical_bias="0.507" />
         </androidx.constraintlayout.widget.ConstraintLayout>
