@@ -67,7 +67,7 @@ class SignInActivity : AppCompatActivity() {
                                 Toast.LENGTH_SHORT
                             ).show()
                             Utlis.user_current = response.body()?.result?.get(0)!!
-                               if (response.body()?.result?.get(0)!!.email == "admin"){
+                               if (response.body()?.result?.get(0)!!.role == 1){
                                    val intent = Intent(this@SignInActivity, AdminActivity::class.java)
                                    startActivity(intent)
                                    finish()
